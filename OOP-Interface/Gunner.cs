@@ -8,25 +8,20 @@ namespace OOP_Interface
 {
     internal class Gunner
     {
-        private IFireable ? fireable = null;
-
-        public IFireable Fireable
-        {
-            set { fireable = value; }
-        }
-        public Gunner() { }
-        public Gunner(IFireable fireable) 
-        {
-            this.fireable = fireable;
-        }
+        public IFireable Equipment { get; set; }
 
         public void Fire()
         {
-            fireable?.Fire();
+            Equipment?.Fire();
         }
         public void MultiFire()
         {
-            fireable?.MultiFire();
+            Equipment?.MultiFire();
+        }
+
+        internal void Equip(IFireable equipment)
+        {
+            this.Equipment = equipment;
         }
     }
 }

@@ -8,23 +8,20 @@ namespace OOP_Interface
 {
     internal class Driver
     {
-        //?表示后面使用的时候会初始化对象，IRunnable是一个对象
-        private IRunnable ? runnable = null;
-
-        public IRunnable Runnable
+        public IRunnable Vehicle
         {
-            set { runnable = value; }
+            get;
+            private set;
         }
-        public Driver(){ }
-        public Driver(IRunnable runnable) 
-        { 
-            this.runnable = runnable;
+
+        public void SetVehicle(IRunnable vehicle)
+        {
+            Vehicle = vehicle;
         }
 
         public void Drive()
         {
-            runnable?.Run();
+            Vehicle?.Run();
         }
-
     }
 }
