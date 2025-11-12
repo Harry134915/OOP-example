@@ -30,7 +30,7 @@ namespace OOP_Interface
             driver.Drive();
 
             //创建汽车
-            Car car = new Car();
+            XiaomiCar car = new XiaomiCar();
             //驾驶员载具切换为车
             driver.SetVehicle(car);
             //驾驶员驾驶载具

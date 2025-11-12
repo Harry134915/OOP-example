@@ -8,11 +8,17 @@ namespace OOP_Interface
 {
     internal class Car : IRunnable
     {
-
-
         public void Run()
         {
             Console.WriteLine("Car Run");
+        }
+    }
+
+    internal class XiaomiCar: IRunnable
+    {
+        public void Run()
+        {
+            Console.WriteLine("XiaomiCar Run");
         }
     }
 }

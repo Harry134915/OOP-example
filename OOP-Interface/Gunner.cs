@@ -8,8 +8,11 @@ namespace OOP_Interface
 {
     internal class Gunner
     {
-        public IFireable Equipment { get; set; }
-
+        public IFireable?Equipment { get; set; }
+        internal void Equip(IFireable equipment)
+        {
+            this.Equipment = equipment;
+        }
         public void Fire()
         {
             Equipment?.Fire();
@@ -17,11 +20,6 @@ namespace OOP_Interface
         public void MultiFire()
         {
             Equipment?.MultiFire();
-        }
-
-        internal void Equip(IFireable equipment)
-        {
-            this.Equipment = equipment;
         }
     }
 }

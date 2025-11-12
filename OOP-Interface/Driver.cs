@@ -8,7 +8,7 @@ namespace OOP_Interface
 {
     internal class Driver
     {
-        public IRunnable Vehicle
+        public IRunnable?Vehicle
         {
             get;
             private set;
